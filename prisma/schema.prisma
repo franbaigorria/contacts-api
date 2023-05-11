@@ -11,24 +11,27 @@ datasource db {
 }
 
 model Contact {
-  id        Int      @id @default(autoincrement())
-  name      String
-  surName   String
-  docType   String
-  docNum    Int      @unique
-  age       Int
-  email     String   @unique
-  landline  Int[]
-  cellphone Int[]
-  adress    Adress[]
+  id                Int     @id @default(autoincrement())
+  name              String
+  surName           String
+  docType           String
+  docNum            Int     @unique
+  age               Int
+  email             String  @unique
+  landline          Int[]
+  cellphone         Int[]
+  city              String
+  street            String
+  height            Int
+  descriptionAdress String?
 }
 
-model Adress {
-  id          Int     @id @default(autoincrement())
-  city        String
-  street      String
-  height      Int
-  description String?
-  person      Contact @relation(fields: [personId], references: [id])
-  personId    Int
-}
+// model Adress {
+//   id          Int      @id @default(autoincrement())
+//   city        String
+//   street      String
+//   height      Int
+//   description String?
+//   Contact     Contact? @relation(fields: [contactId], references: [id])
+//   contactId   Int?
+// }

@@ -14,9 +14,9 @@ async function main() {
       email: 'franbaigorria21@gmail.com',
       docType: 'DNI',
       docNum: 40000000,
-      adress: {
-        create: { city: 'Laguna Larga', street: 'Illia', height: 100 },
-      },
+      city: 'Laguna Larga',
+      street: 'Illia',
+      height: 100,
       landline: 444444,
       cellphone: 33334444,
     },
